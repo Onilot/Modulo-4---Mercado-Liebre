@@ -3,9 +3,9 @@ const app = express();
 const path = require('path');
 const publicFolderPath = path.resolve('public');
 app.use(express.static(publicFolderPath));
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.log('Servidor funcionando en puerto $ {port}')
+    console.log('Servidor funcionando en puerto http://localhost:3000/')
 });
 app.get('/', (req, res) =>{
     res.sendFile(__dirname + '/views/home.html')
